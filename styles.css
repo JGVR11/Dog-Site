@@ -1,1 +1,50 @@
+/*UNIVERSAL STYLE*/
+html, body {
+    margin: 0;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-style: italic;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+/*HEADER STYLE*/
+nav {
+    width: 100%;
+    background-color: green;
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+
+li {
+    display: inline-block;
+    padding: 10px 70px;
+}
+
+/*MAIN STYLE */
+body {
+    background-color: bisque;
+}
+main {
+    position: absolute;
+    top: 80px;
+    left: 70px;
+    background-color: gainsboro;
+    height: 80%;
+    width: 90%;
+}
 
