@@ -4,21 +4,33 @@ html, body {
 }
 
 h1 {
+    position: relative;
+    top: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-style: italic;
+    text-align: center;
 }
 
 h2 {
+    position: relative;
+    top: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
+    font-size: 1.9rem;
     font-style: italic;
+    margin-left: 15px;
+    
 }
 
-p {
+p, aside {
+    position: relative;
+    top: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 1.5rem;
+    line-height: 2;
+    margin-left: 50px;
 }
+
 
 /*HEADER STYLE*/
 nav {
@@ -28,6 +40,8 @@ nav {
     text-align: center;
     position: fixed;
     top: 0;
+    font-size: 1.2rem;
+    z-index: 999;
 }
 
 li {
@@ -39,12 +53,47 @@ li {
 body {
     background-color: bisque;
 }
+
 main {
-    position: absolute;
-    top: 80px;
-    left: 70px;
     background-color: gainsboro;
-    height: 80%;
+    height: 20%;
     width: 90%;
+    margin: 40px auto;
+}
+
+#external-resources li {
+    display: list-item;
+    list-style-type: circle;
+    font-size: 1.2rem;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    margin: auto 30%;
+}
+
+.photo-album-functionality {
+    text-align: center;
+}
+
+#previous-arrow, #photo-count, #next-arrow {
+    display: inline;
+}
+
+#previous-arrow {
+    margin-right: 5px;
+}
+
+#next-arrow {
+    margin-left: 5px;
+}
+/*Footer styles*/
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: green;
 }
 
