@@ -14,7 +14,7 @@ h1 {
 
 h2 {
     position: relative;
-    top: 30px;
+    top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.9rem;
     font-style: italic;
@@ -24,9 +24,9 @@ h2 {
 
 p, aside {
     position: relative;
-    top: 30px;
+    top: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2;
     margin-left: 50px;
 }
@@ -64,13 +64,18 @@ main {
 #external-resources li {
     display: list-item;
     list-style-type: circle;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 img {
     width: 40%;
     height: 40%;
-    margin: auto 30%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    border: 1px black solid;
+    border-radius: 20px;
 }
 
 .photo-album-functionality {
@@ -82,11 +87,25 @@ img {
 }
 
 #previous-arrow {
-    margin-right: 5px;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#previous-arrow:hover {
+    background-color: blue;
+    color: white;
 }
 
 #next-arrow {
-    margin-left: 5px;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#next-arrow:hover {
+    background-color: blue;
+    color: white;
 }
 /*Footer styles*/
 footer {
