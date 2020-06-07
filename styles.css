@@ -25,7 +25,7 @@ h2 {
     display: block;
 }
 
-p, aside {
+p{
     position: relative;
     top: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -33,11 +33,12 @@ p, aside {
     line-height: 2;
     margin-left: 50px;
     color: white;
-    display: block;
+    display: inline-block;
 }
 
 a {
     color: rgba(255, 193, 105, 95);
+    font-style: italic;
 }
 
 /*HEADER STYLE*/
@@ -98,7 +99,7 @@ main {
     font-size: 1rem;
 }
 
-img {
+.dogs-pictures {
     width: 40%;
     height: 40%;
     margin-left: 30%;
@@ -108,6 +109,21 @@ img {
     border: 1px black solid;
     border-radius: 20px;
     display: block;
+}
+
+.dogs-evolution {
+    width: 40%;
+    height: 20%;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 2%;
+}
+
+figcaption {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin-left: 12%;
 }
 
 .photo-album-functionality {
@@ -140,6 +156,27 @@ img {
     background-color: rgba(53, 127, 176, 69);
     color: white;
 }
+
+.dogs-background p {
+    width: 50%;
+    top: 2px;
+}
+
+aside {
+    box-sizing: border-box;
+    position: relative;
+    left: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.5rem;
+    line-height: 2;
+    color: white;
+    background-color: rgba(53, 127, 176, 69);
+    display: inline-block;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
 /*Footer styles*/
 footer {
     position: relative;
