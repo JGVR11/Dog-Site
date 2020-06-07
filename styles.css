@@ -63,6 +63,18 @@ li {
     color: rgba(104, 195, 255, 100);
 }
 
+.dog-paws-logo {
+    position: absolute;
+    top: 8%;
+    right: 88%;
+    width: 10%;
+    height: 90%;
+    border-radius: 50px;
+}
+.dog-paws-logo:hover {
+    border: 1px solid rgba(255, 193, 105, 95);
+}
+
 /*TITLE PAGE STYLE*/
 .title-page {
     display: inline-block;
