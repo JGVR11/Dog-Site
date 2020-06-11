@@ -1,3 +1,4 @@
+//INDEX HTML
 document.getElementById('previous-arrow').innerHTML = '<';
 document.getElementById('next-arrow').innerHTML = '>';
 const dogPhotos = ['Resources/Smiley-Dog.jpg', 'Resources/husky.jpg', 'Resources/Dogs1.jpg', 'Resources/dogs-playing.jpg', 'Resources/dog-under-blanket.jpg'];
@@ -7,7 +8,7 @@ let photoCount = document.getElementById('photo-count');
 let previousArrow = document.getElementById('previous-arrow');
 let nextArrow = document.getElementById('next-arrow');
 
-
+//function that goes to the next photo in the dogs album
 const getNextPhoto = () => {
    if (photoCount.innerHTML === '1 of 5') {
        photoAlbum.setAttribute('src', dogPhotos[1]);
@@ -25,6 +26,7 @@ const getNextPhoto = () => {
     
 };
 
+//function that gets the previous photo from the dogs album
 const getPreviousPhoto = () => {
     if (photoCount.innerHTML === '2 of 5') {
         photoAlbum.setAttribute('src', dogPhotos[0]);
