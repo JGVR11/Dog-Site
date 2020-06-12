@@ -25,7 +25,32 @@ const dogBreedPhotos = {
             name: '5) Pug ',
             url: 'Resources/pug.jpg',
             description: 'pug the best'
-        }
+        },
+        {
+            name: '6) Golden Retriever',
+            url: 'Resources/golden-retriever.jpg',
+            description: "haha"
+        },
+        {
+            name: '7) Poodle',
+            url: 'Resources/poodle.jpg',
+            description: "huhu"
+        },
+        {
+            name: '8) Chihuahua',
+            url: 'Resources/chihuahua.jpg',
+            description: "hoho"
+        },
+        {
+            name: '9) French Bulldog',
+            url: 'Resources/french-bulldog.jpg',
+            description: "hehe"
+        },
+        {
+            name: '10) Pomeranian',
+            url: 'Resources/pomeranian.jpg',
+            description: 'hih'
+        },
     ]
 }
 
@@ -34,19 +59,21 @@ const dogBreedInfo = document.getElementById("dog-breed-info");
 
 
 for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
+   let divElement = document.createElement('div');
    let figureElement = document.createElement('figure'); 
    let figureCaption = document.createElement('figcaption');
    let imgElement = document.createElement('img');
    let descriptionElement = document.createElement('h3');
    let paragraphElement = document.createElement('p');
    
-   if (index % 2 === 0) {
+   /*if (index % 2 === 0) {
        figureElement.setAttribute('class', 'even-breed-ranking');
    }else {
        figureElement.setAttribute('class', 'odd-breed-ranking');
-   }
-
+   }*/
+   divElement.setAttribute('class', 'grid-item');
    imgElement.setAttribute('id', 'breed-photos');
+   descriptionElement.setAttribute('class', 'breed-description');
    descriptionElement.innerHTML = "Description";
    descriptionElement.style.opacity = '1';
 
@@ -69,7 +96,8 @@ for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
    figureElement.appendChild(imgElement);
    figureElement.appendChild(descriptionElement);
    figureElement.appendChild(paragraphElement);
-   dogBreedInfo.appendChild(figureElement);
+   divElement.appendChild(figureElement);
+   dogBreedInfo.appendChild(divElement);
 }
 
 
