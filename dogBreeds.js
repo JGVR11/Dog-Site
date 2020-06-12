@@ -56,6 +56,9 @@ const dogBreedPhotos = {
 
 //Parent Element where all the pictures and dog breed information are going to be
 const dogBreedInfo = document.getElementById("dog-breed-info");
+const myModal = document.getElementById('my-modal');
+const modalContent = document.getElementById('modal-content');
+const closeModal = document.getElementById('close-modal');
 
 
 for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
@@ -65,29 +68,24 @@ for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
    let imgElement = document.createElement('img');
    let descriptionElement = document.createElement('h3');
    let paragraphElement = document.createElement('p');
+   let modalImage = document.createElement('img');
    
-   /*if (index % 2 === 0) {
-       figureElement.setAttribute('class', 'even-breed-ranking');
-   }else {
-       figureElement.setAttribute('class', 'odd-breed-ranking');
-   }*/
+
    divElement.setAttribute('class', 'grid-item');
    imgElement.setAttribute('id', 'breed-photos');
+   modalImage.setAttribute('id', 'modal-images');
    descriptionElement.setAttribute('class', 'breed-description');
    descriptionElement.innerHTML = "Description";
    descriptionElement.style.opacity = '1';
 
    descriptionElement.onclick = function() {
-       if (descriptionElement.style.opacity === '1'){
+        modalImage.setAttribute('src', dogBreedPhotos.dogBreeds[index].url);
         paragraphElement.innerHTML = dogBreedPhotos.dogBreeds[index].description;
-        paragraphElement.style.display = 'block';
-        descriptionElement.innerHTML = "Description ^";
-        descriptionElement.style.opacity = '0.8';
-       } else if (descriptionElement.style.opacity === '0.8') {
-           paragraphElement.style.display = 'none';
-           descriptionElement.style.opacity = '1';
-           descriptionElement.innerHTML = "Description";
-       }
+        myModal.style.display = 'block';
+   }
+
+   closeModal.onclick = function() {
+       myModal.style.display = 'none';
    }
 
    imgElement.setAttribute('src', dogBreedPhotos.dogBreeds[index].url);
@@ -95,8 +93,9 @@ for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
    figureElement.appendChild(figureCaption);
    figureElement.appendChild(imgElement);
    figureElement.appendChild(descriptionElement);
-   figureElement.appendChild(paragraphElement);
    divElement.appendChild(figureElement);
+   modalContent.appendChild(modalImage);
+   modalContent.appendChild(paragraphElement);
    dogBreedInfo.appendChild(divElement);
 }
 
