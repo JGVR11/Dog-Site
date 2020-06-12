@@ -82,7 +82,7 @@ li {
     background-size: cover;
     height: 500px;
     width: 1440px;
-    
+    padding-top: 10%;
 }
 
 .title-page h1 {

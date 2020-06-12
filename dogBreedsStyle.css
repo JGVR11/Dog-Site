@@ -28,7 +28,7 @@ h2 {
 p {
     position: relative;
     top: 20px;
-    right: 20%;
+    right: 18%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     line-height: 2;
@@ -37,6 +37,8 @@ p {
     display: inline-block;
     width: 100%;
     padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 10px;
 }
 
 a {
@@ -49,6 +51,22 @@ h3 {
     color: rgba(255, 193, 105, 95);
     cursor: pointer;
     margin-left: 20%;
+}
+
+/*TITLE PAGE STYLE*/
+.title-page {
+    display: inline-block;
+    background: url('Resources/different-dog-breeds.jpg') center center no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 1440px;
+}
+
+.title-page h1 {
+    position: absolute;
+    top: 58%;
+    left: 37%;
+    font-size: 3rem;
 }
 
 /*HEADER STYLE*/
@@ -90,36 +108,54 @@ body {
     background-color: rgba(104, 195, 255, 100);
 }
 
-#dog-breed-info {
-    height: 20%;
-    width: 40%;
+main{
     /*border: 1px solid black;*/
-    margin-top: 8%;
-    margin-left: 10%;
+    margin-top: 10%;
+}
+
+#dog-breed-info{
+    height: 40%;
+    width: 90%;
+    /*border: 1px solid black;*/
+    margin-top: 1%;
+    margin-left: 5%;
     margin-bottom: 4%;
     box-sizing: border-box;
 }
 
-figure {
-    height: 70%;
-    width: 70%;
-    position: relative;
-    margin-left: 25%;
-    margin-top: 10%;
+.even-breed-ranking {
+    height: 40%;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
-img {
-    height: 20%;
+.odd-breed-ranking {
+    height: 40%;
+    width: 50%;
+    margin-left: 45%;
+    margin-top: 5%;
+}
+
+#breed-photos {
+    height: 40%;
     width: 70%;
     border: 1px solid black;
     border-radius: 20px;
 }
 
 figcaption {
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.9rem;
     font-style: italic;
-    margin-left: 20%;
+    margin-bottom: 2%;
+    /*margin-left: 20%;*/
+    color: rgba(255, 193, 105, 95);
+    background-color: rgba(53, 127, 176, 69);
+    display: block;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
 }
 
 

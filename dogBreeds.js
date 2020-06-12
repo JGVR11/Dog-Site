@@ -2,27 +2,27 @@
 const dogBreedPhotos = {
     dogBreeds: [
         {
-            name: 'Bulldog',
+            name: '1) Bulldog',
             url: "Resources/Bulldog.jpg",
             description: "The Bulldog, also known as British Bulldog or English Bulldog, is considered a medium-sized breed. The Bulldog has a muscular body, wrinkled face and a distinctive pushed-in nose. According to the American Kennel Club, the Bulldog has a friendly, courageous and calm temperament with a life expectancy of 8 to 10 years."
         },
         {
-            name: 'German-Shepherd',
+            name: '2) German-Shepherd',
             url: 'Resources/germanShepherd.jpg',
             description: 'German Shepherds are medium to large-sized dogs. German Shepherds are considered a very smart breed, and one of the prefer breeds for law enforcements. According to the American Kennel Club, the German Shepherd has a confident, courageous, and smart temperament.'
         },
         {
-            name: 'Labrador-Retriever',
+            name: '3) Labrador-Retriever',
             url: 'Resources/labrador-retriever.jpg',
             description: 'labrador the anoying'
         },
         {
-            name: 'Siberian Husky',
+            name: '4) Siberian Husky',
             url: 'Resources/siberian-husky.jpg',
             description: 'siberian the prettier'
         },
         {
-            name: 'Pug ',
+            name: '5) Pug ',
             url: 'Resources/pug.jpg',
             description: 'pug the best'
         }
@@ -30,7 +30,7 @@ const dogBreedPhotos = {
 }
 
 //Parent Element where all the pictures and dog breed information are going to be
-const parentElement = document.getElementById("dog-breed-info");
+const dogBreedInfo = document.getElementById("dog-breed-info");
 
 
 for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
@@ -39,10 +39,14 @@ for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
    let imgElement = document.createElement('img');
    let descriptionElement = document.createElement('h3');
    let paragraphElement = document.createElement('p');
-       
+   
+   if (index % 2 === 0) {
+       figureElement.setAttribute('class', 'even-breed-ranking');
+   }else {
+       figureElement.setAttribute('class', 'odd-breed-ranking');
+   }
 
-   imgElement.setAttribute('src', dogBreedPhotos.dogBreeds[index].url);
-   figureCaption.innerHTML = dogBreedPhotos.dogBreeds[index].name;
+   imgElement.setAttribute('id', 'breed-photos');
    descriptionElement.innerHTML = "Description";
    descriptionElement.style.opacity = '1';
 
@@ -59,13 +63,13 @@ for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
        }
    }
 
-
-
-   figureElement.appendChild(imgElement);
+   imgElement.setAttribute('src', dogBreedPhotos.dogBreeds[index].url);
+   figureCaption.innerHTML = dogBreedPhotos.dogBreeds[index].name;
    figureElement.appendChild(figureCaption);
+   figureElement.appendChild(imgElement);
    figureElement.appendChild(descriptionElement);
    figureElement.appendChild(paragraphElement);
-   parentElement.appendChild(figureElement);
+   dogBreedInfo.appendChild(figureElement);
 }
 
 
