@@ -119,6 +119,7 @@ main{
     border-radius: 10px;
     width: 90%;
     height: 90%;
+    overflow: auto;
 }
 
 .grid-title-item {

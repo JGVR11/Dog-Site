@@ -51,6 +51,81 @@ const dogBreedPhotos = {
             url: 'Resources/pomeranian.jpg',
             description: 'hih'
         },
+        {
+            name: '11) Boxer',
+            url: 'Resources/boxer.jpg',
+            description: 'hih'
+        },
+        {
+            name: '12) Pitbull Terrier',
+            url: 'Resources/pomeranian.jpg',
+            description: 'hih'
+        },
+        {
+            name: '13) Yorkshire Terrier',
+            url: 'Resources/yorkshire-terrier.jpg',
+            description: 'hih'
+        },
+        {
+            name: '14) Beagle',
+            url: 'Resources/beagle.jpg',
+            description: 'hih'
+        },
+        {
+            name: '15) Pembroke Welsh Corgi',
+            url: 'Resources/corgi.jpg',
+            description: 'hih'
+        },
+        {
+            name: '16) Australian Shepherd',
+            url: 'Resources/australian-shepherd.jpg',
+            description: 'huh',
+        },
+        {
+            name: '17) Great Dane',
+            url: 'Resources/great-dane.jpg',
+            description: 'huh',
+        },
+        {
+            name: '18) Dachshund',
+            url: 'Resources/dachshund.jpg',
+            description: 'huh',
+        },
+        {
+            name: '19) Rottweilers',
+            url: 'Resources/rottweiler.jpg',
+            description: 'huh',
+        },
+        {
+            name: '20) Cavalier King Charles Spaniel',
+            url: 'Resources/charles-spaniel.jpg',
+            description: 'huh',
+        },
+        {
+            name: '21) Doberman Pinscher',
+            url: 'Resources/doberman.png',
+            description: 'huh',
+        },
+        {
+            name: '22) Shih Tzu',
+            url: 'Resources/shih-tzu.jpg',
+            description: 'huh',
+        },
+        {
+            name: '23) Boston Terrier',
+            url: 'Resources/boston-terrier.jpg',
+            description: 'huh',
+        },
+        {
+            name: '24) Bernese Mountain Dog',
+            url: 'Resources/bernese-dog.jpg',
+            description: 'huh',
+        },
+        {
+            name: '25) Havanese',
+            url: 'Resources/havanese.jpg',
+            description: 'huh',
+        },
     ]
 }
 
@@ -69,6 +144,7 @@ for (let index = 0; index < dogBreedPhotos.dogBreeds.length; index++) {
    let descriptionElement = document.createElement('h3');
    let paragraphElement = document.createElement('p');
    let modalImage = document.createElement('img');
+   
    
 
    divElement.setAttribute('class', 'grid-item');
