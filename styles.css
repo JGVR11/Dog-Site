@@ -51,7 +51,7 @@ nav {
     top: 0;
     font-size: 1.2rem;
     z-index: 999;
-    border: 0.5px solid black;
+    border-bottom: 0.5px solid rgba(255, 193, 105, 95);
 }
 
 li {
