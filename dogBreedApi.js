@@ -1,27 +1,52 @@
 const fetch = require("node-fetch");
 
-const url = 'https://api.thedogapi.com/v1/breeds?';
-const queryParams = {
-    breedKey: 'attach_breed=',
-    breedValue: '5',
-    pageKey: 'page=',
-    pageValue: '5',
-    limitKey: 'limit=',
-    limitValue: '5'
+//This is the URL for TheDogApi.
+const url = 'https://api.thedogapi.com/v1/breeds/search?';
+
+function renderResponse(response) {
+    const dogName = document.createElement('h3');
+    const bred_for = document.createElement('h3');
+    const error = document.createElement('h2');
+
+    const gridContainer = document.getElementById('best-dogs-container');
+
+    if (!response) {
+        console.log(response.status);
+    }
+
+    if(!response.length) {
+        error.innerHTML = "Try Again! No dogs found.";
+        gridContainer.appendChild(error);
+    }
+
+    for (let index = 0; index < response.length; index++){
+        const name = dogName;
+        const dogBredFor = bred_for;
+
+        name.innerHTML = response[index].name;
+        dogBredFor = response[index].bref_for;
+
+        gridContainer.appendChild(name);
+        gridContainer.appendChild(dogBredFor);
+    }
 };
 
-async function getData() {
+//This is the function making the GET request to TheDogApi.
+async function getData(queryParam) {
     try{
-        const endpoint = `${url}${queryParams.breedKey}${queryParams.breedValue}&${queryParams.pageKey}${queryParams.pageValue}&${queryParams.limitKey}${queryParams.limitValue}`;
+        const endpoint = `${url}${queryParam.qKey}${queryParam.qValue}`;
         const response = await fetch(endpoint);
-        if(response.ok) {
+
+        if (response.ok) {
             const jsonResponse = await response.json();
-            console.log(jsonResponse[0].name);
-            console.log(jsonResponse[0].temperament);
-            return jsonResponse;
+            renderResponse(jsonResponse);
+            //console.log(jsonResponse);
+            //const dogBreedInfo = [jsonResponse[0].name, jsonResponse[0].bred_for];
+            //console.log(dogBreedInfo);
+            //return dogBreedInfo;
         }
-    } catch(error) {
+
+    }catch(error) {
         console.log(error);
     }
-}
-getData();
+};
