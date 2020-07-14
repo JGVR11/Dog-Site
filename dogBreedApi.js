@@ -1,11 +1,7 @@
-const fetch = require("node-fetch");
-
 //This is the URL for TheDogApi.
 const url = 'https://api.thedogapi.com/v1/breeds/search?';
 
 function renderResponse(response) {
-    const dogName = document.createElement('h3');
-    const bred_for = document.createElement('h3');
     const error = document.createElement('h2');
 
     const gridContainer = document.getElementById('best-dogs-container');
@@ -20,14 +16,15 @@ function renderResponse(response) {
     }
 
     for (let index = 0; index < response.length; index++){
-        const name = dogName;
-        const dogBredFor = bred_for;
+        const dogName = document.createElement('h3');
+        const bred_for = document.createElement('h3');
+        
 
-        name.innerHTML = response[index].name;
-        dogBredFor = response[index].bref_for;
+        dogName.innerHTML = response[index].name;
+        bred_for.innerHTML = response[index].bred_for;
 
-        gridContainer.appendChild(name);
-        gridContainer.appendChild(dogBredFor);
+        gridContainer.appendChild(dogName);
+        gridContainer.appendChild(bred_for);
     }
 };
 

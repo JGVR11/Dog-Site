@@ -7,7 +7,7 @@ const queryParam = {
 //The line below 
 const germanShepherd = queryParam;
 germanShepherd.qValue = 'German Shepherd';
-getData(germanShepherd.qValue);
+getData(germanShepherd);
 
 
 
