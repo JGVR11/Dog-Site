@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+}
+
+h1 {
+    position: relative;
+    top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    text-align: center;
+    color: rgba(255, 193, 105, 95);
+    display: block;
+}
+
+h2 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.9rem;
+    font-style: italic;
+    color: rgba(255, 193, 105, 95);
+}
+
+p {
+    position: relative;
+    top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-left: 50px;
+    color: white;
+    display: inline-block;
+}
+
+a {
+    color: rgba(255, 193, 105, 95);
+    font-style: italic;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 193, 105, 95);
+    
+}
+
+/*TITLE PAGE STYLE*/
+.title-page {
+    display: inline-block;
+    background: url('Resources/different-dog-breeds.jpg') center center no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 1440px;
+}
+
+.title-page h1 {
+    position: absolute;
+    top: 58%;
+    left: 40%;
+    font-size: 3rem;
+}
+
+/*HEADER STYLE*/
+nav {
+    width: 100%;
+    background-color: rgba(53, 127, 176, 69);
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    font-size: 1.2rem;
+    z-index: 999;
+    border-bottom: 0.5px solid rgba(255, 193, 105, 95);
+}
+
+li {
+    display: inline-block;
+    padding: 10px 70px;
+}
+
+#dog-breed:hover, #best-dogs:hover {
+    background-color: rgba(255, 193, 105, 95);
+    color: rgba(104, 195, 255, 100);
+    border-radius: 10px;
+}
+
+.dog-paws-logo {
+    position: absolute;
+    top: 8%;
+    right: 88%;
+    width: 10%;
+    height: 90%;
+    border-radius: 50px;
+}
+
+.dog-paws-logo:hover {
+    border: 1px solid rgba(255, 193, 105, 95);
+}
+
+/*MAIN STYLE*/
+body {
+    background-color: rgba(104, 195, 255, 100);
+}
+
+main{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: rgba(53, 127, 176, 69);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 2%;
+    margin-left: 5%;
+    margin-right: 3%;
+    padding-bottom: 10%;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+}
