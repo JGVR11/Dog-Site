@@ -3,7 +3,6 @@ const url = 'https://api.thedogapi.com/v1/breeds/search?';
 
 function renderResponse(response) {
     const error = document.createElement('h2');
-    const gridContainer = document.getElementById('best-dogs-container');
 
     if (!response) {
         console.log(response.status);
@@ -16,10 +15,10 @@ function renderResponse(response) {
 
     for (let index = 0; index < response.length; index++){
         const dogName = document.createElement('h3');
-        dogName.setAttribute("id", "dog-name");
         const bred_for = document.createElement('h3');
+
+        dogName.setAttribute("id", "dog-name");
         bred_for.setAttribute("id", "dog-bred-for");
-        
 
         dogName.innerHTML = response[index].name;
         bred_for.innerHTML = response[index].bred_for;
